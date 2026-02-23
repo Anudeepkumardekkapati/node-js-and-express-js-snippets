@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Date App</title>
+</head>
+
+<body>
+
+    <h2 id="date">Loading...</h2>
+
+    <script>
+        fetch("http://localhost:3000/")
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("date").innerText = data.date;
+            });
+    </script>
+
+</body>
+
+</html>
